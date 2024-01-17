@@ -185,9 +185,9 @@
             const boxColor = score > 0.5 ? "green" : "red";
           
             // Set specific values for the box's size
-            const specificWidth = box.width + 30; // Add 20 pixels to the width
+            const specificWidth = box.width + 20; // Add 20 pixels to the width
             const specificHeight = box.height + 20; // Add 20 pixels to the height
-            box = new faceapi.Rect(box.x - 15, box.y - 10, specificWidth, specificHeight); // Adjust x and y to compensate for the increased size
+            box = new faceapi.Rect(box.x, box.y, specificWidth, specificHeight); // Adjust x and y to compensate for the increased size
           
             const drawBox = new faceapi.draw.DrawBox(box, {
               label: `${parseInt(score * 100)}% a face`,
